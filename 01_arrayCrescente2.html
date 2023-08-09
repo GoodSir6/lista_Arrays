@@ -4,11 +4,18 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2).
 
     //ENTRADA
-
+    const n1 = parseFloat(prompt("Insira um número:").trim());
+    const n2 = parseFloat(prompt("Insira um número:").trim());
 
     //PROCESSAMENTO
-
+    let Numero = []
+    if (n1 > n2) {
+        Numero = [n2, n1];
+    } else {
+        Numero = [n1, n2]; 
+    }
 
     //SAÍDA
-    
+    alert(`${Numero.join(" - ")}`);
+
 </script>
