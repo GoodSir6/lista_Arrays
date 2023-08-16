@@ -9,15 +9,17 @@
     let n3 = parseFloat(prompt("Insira outro número:").trim());
 
     //PROCESSAMENTO
-    n1 = Math.min(n1, n2, n3);
-    n2 = Math.max(n1, n2, n3);
-    let final = [];
-    //SAÍDA
-    if (n3 ) {
-        
-    } else {
-        
+    const menor = Math.min(n1, n2, n3);
+    const maior = Math.max(n1, n2, n3);
+    let final = [maior, menor];
+    if (!final.includes(n1)) {
+        final.splice(1, 0, n1);
+    }
+    if (!final.includes(n2)) {
+        final.splice(1, 0, n2);
+    }
+    if (!final.includes(n3)) {
+        final.splice(1, 0, n3);
     }
     alert(final.join(" - "));
-
 </script>
