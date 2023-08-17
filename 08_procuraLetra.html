@@ -6,11 +6,17 @@
     //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
 
     //ENTRADA
-
+    let palavra = prompt("Insira uma palavra aleatória:").trim();
+    const letra = prompt("Insira uma letra que deseja encontrar na palavra que acabou de digitar:").trim();
 
     //PROCESSAMENTO
-
-
+    const casaPalavra = palavra.search(letra);
+    if (casaPalavra == -1) {
+        alert(`A letra ${letra} não foi encontrada no termo inserido: ${palavra}`);
+    }
+    else if (casaPalavra >= 0) {
+        alert(`A letra digitada existe na palavra! posição da letra na palavra: ${casaPalavra}`);
+    }
     //SAÍDA
 
 </script>

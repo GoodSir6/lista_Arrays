@@ -11,15 +11,32 @@
 
     //ENTRADA
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-    let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
     let carrosHatch = ["308", "Focus", "i30"];
     let carros = ["SUV", "Sedan", "Hatch"];
-    const add1 = prompt("Insira outro carro que deseja adicionar:").trim();
+    const add1 = prompt("Insira um carro que deseja adicionar:").trim();
+    let carro1 = prompt("Insira qual o tipo do carro: 1-SUV | 2-Sedan | 3-Hatch").toUpperCase();
     const add2 = prompt("Insira outro carro que deseja adicionar:").trim();
+    let carro2 = prompt("Insira qual o tipo do carro: 1-SUV | 2-Sedan | 3-Hatch").toUpperCase();
     const add3 = prompt("Insira outro carro que deseja adicionar:").trim();
+    let carro3 = prompt("Insira qual o tipo do carro: 1-SUV | 2-Sedan | 3-Hatch").toUpperCase();
+    
     //PROCESSAMENTO
+    if (carro1 == 1) carrosSUV.push(add1);
+    else if (carro1 == 2) carrosSedan.push(add1);
+    else if (carro1 == 3) carrosHatch.push(add1);
 
+    if (carro2 == 1) carrosSUV.push(add2);
+    else if (carro2 == 2) carrosSedan.push(add2);
+    else if (carro2 == 3) carrosHatch.push(add2);
 
+    if (carro3 == 1) carrosSUV.push(add3);
+    else if (carro3 == 2) carrosSedan.push(add3);
+    else if (carro3 == 3) carrosHatch.push(add3);
+
+    alert("Lista de carros SUV: " + carrosSUV.join(" - "));
+    alert("Lista de carros Sedan: " + carrosSedan.join(" - "));
+    alert("Lista de carros Hatch: " + carrosHatch.join(" - "));
     //SAÍDA
 
 </script>

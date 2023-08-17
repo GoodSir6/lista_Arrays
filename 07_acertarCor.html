@@ -10,9 +10,18 @@
     //NÃO FOI DESSA VEZ... TENTE NOVAMENTE!
 
     //ENTRADA
-
+    const nomeCores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
+    const corUsuario = prompt("Insira uma cor dentre estas: " + nomeCores.join(", ")).trim().toLowerCase();
+    let NumeroAleatorio = Math.round(Math.random() * 6)
+    const numCor = nomeCores.indexOf(corUsuario);
 
     //PROCESSAMENTO
+    if (numCor == NumeroAleatorio) {
+        alert(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corUsuario}`);
+    }
+    else {
+        alert(`NÃO FOI DESSA VEZ... TENTE NOVAMENTE!`);
+    }
 
 
     //SAÍDA
